@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import React, {useState} from "react";
 import './App.css';
 
 function App() {
-  return (
+  const [nome, setNome] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [celular, setCelular] = useState("");
+    return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        Manga Rosa
       </header>
+      <section className="App-section">
+        Registro de usuário
+
+        <form>
+          <input value={nome} onChange={setNome} placeholder={"Nome"} />
+          <input value={cpf} onChange={setCpf} placeholder={"CPF"} />
+          <input value={celular} onChange={setCelular} placeholder={"Celular"} />
+        </form>
+
+      </section>
     </div>
   );
 }
